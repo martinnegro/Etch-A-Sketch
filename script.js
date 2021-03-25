@@ -18,7 +18,10 @@ const boton = document.querySelector("button");
 boton.addEventListener('click',ingreseCantidad);
 
 function ingreseCantidad() {
-    let cant = prompt('Ingrese cantidad por lado\n(max 100)');
+    let cant = prompt('Ingrese cantidad por lado\n(min 1 max 100)');
+    if (cant < 1 || cant > 100 || isNaN(cant)) {
+        ingreseCantidad();
+    }
     cantidad(cant);
 }
 
