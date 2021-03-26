@@ -43,9 +43,15 @@ function cantidad(cant){
 }
 
 
-
+let lightness = 0;  
 function cambiacolor(){
-    this.style.backgroundColor = "red";
+    let hue = Math.round(Math.random() * 360);
+    let saturation = Math.round(Math.random() * 100); 
+    if (lightness === 100) {lightness = 0}
+        else {lightness = lightness + 10};
+    console.log(lightness);
+
+    this.style.backgroundColor = "hsl(" + hue +", " + saturation + "%, " + lightness + "%)";
 }
 function pasaMouse() {
 const quads = Array.from(document.querySelectorAll('.quads'));
