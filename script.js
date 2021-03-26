@@ -43,15 +43,14 @@ function cantidad(cant){
 }
 
 
-let lightness = 0;  
+let lightness = 25;  
 function cambiacolor(){
     let hue = Math.round(Math.random() * 360);
     let saturation = Math.round(Math.random() * 100); 
-    if (lightness === 100) {lightness = 0}
-        else {lightness = lightness + 10};
-    console.log(lightness);
-
+    if (lightness === 75) {lightness = 25}
+        else {lightness = lightness + 5};
     this.style.backgroundColor = "hsl(" + hue +", " + saturation + "%, " + lightness + "%)";
+    console.log(this.style.backgroundColor);
 }
 function pasaMouse() {
 const quads = Array.from(document.querySelectorAll('.quads'));
